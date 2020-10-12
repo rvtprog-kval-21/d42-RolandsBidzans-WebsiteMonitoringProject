@@ -1,12 +1,17 @@
 # Tīmekļa vietnes uzraudzības pakalpojums “WEBcheck”
-*Lasīt šo informāciju citās valodās: [🇬🇧](README.eng.md)* 
-
 
 ## Projekta apraksts
 PIKC “Rīgas Valsts tehnikums” Kvalifikācijas darba repozitorijs. Uzraudzības pakalpojums, kas ļauj pārbaudīt
 jūsu tīmekļa vietnes statistiku - pingu, portu, atbildes laiku, SSL sertifikācijas pārbaudi un daudz ko citu. 
 Lietotāja/administratora/viesa autentifikācija un pārvaldības sistēma. Ir 2 veidu konti - bezmaksas un pro.
 
+
+## Ko esmu paveicis šajā projektā
+    -Izveidoju dizainu priekš "Home page" iekšā figma.com.
+    -Izveidoju dizainu priekš "Log in page" iekšā figma.com.
+    -Izveidoju dizainu priekš "Features page" iekšā figma.com.
+    -Realizēju dizainu "Home page".
+    
 ## Saturs
  - [Versijas](#versijas)
  - [Izmantotās tehnoloģijas](#izmantotās-tehnoloģijas)
@@ -14,7 +19,8 @@ Lietotāja/administratora/viesa autentifikācija un pārvaldības sistēma. Ir 2
  - [Instalācija](#instalācija)
    - [Klonešana](#klonešana)
    - [Uzstādīšana](#uzstādīšana)
- - [Izmantotie avoti](#izmantotie-avoti)
+   - [Kopējie izmantotie avoti](#kopējie-zmantotie-avoti)
+ - [Mani izmantotie avoti](#mani-izmantotie-avoti)
 
 ## Versijas
  - Php: **7.2.5**
@@ -141,7 +147,7 @@ Laravel development server started: http://127.0.0.1:8000
 [Mon Oct  5 14:46:45 2020] PHP 7.4.3 Development Server (http://127.0.0.1:8000) started
 ```
 
-## Izmantotie avoti
+## Kopējie izmantotie avoti
 - HTML
     - https://www.w3schools.com/html/
     - https://html.com/
@@ -221,3 +227,9 @@ Laravel development server started: http://127.0.0.1:8000
     - https://tobiasahlin.com/blog/chartjs-charts-to-get-you-started/
 
 
+
+## Mani izmantotie avoti
+
+Par paraugu ņemtie vietņu uzraudzības pakalpojumu mājaslapas.
+1.	http://www.serviceuptime.com/
+2.	https://uptimerobot.com/
