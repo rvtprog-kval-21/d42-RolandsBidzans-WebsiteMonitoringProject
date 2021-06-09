@@ -243,8 +243,34 @@ Laravel development server started: http://127.0.0.1:8000
     - https://github.com/fzaninotto/Faker
     - https://laravel-news.com/changes-coming-to-php-faker
 ## Mani izmantotie avoti
-
+- Adminlte/ChartJS
+    - https://adminlte.io/themes/dev/AdminLTE/pages/charts/chartjs.html
+- Date rang picker
+    - https://www.daterangepicker.com/
+- Jquery data picker
+    - https://jqueryui.com/datepicker/
+- Bootstrap color picker
+    - https://cdnjs.com/libraries/bootstrap-colorpicker/3.2.0
+    - https://itsjavi.com/bootstrap-colorpicker/module-options.html
+    - https://itsjavi.com/bootstrap-colorpicker/v2/
+    - https://itsjavi.com/bootstrap-colorpicker/tutorial-Basics.html
+- easy-pie-chart
+    - https://code.jquery.com/ 
+    - https://github.com/rendro/easy-pie-chart/tree/master/dist
+    - https://drive.google.com/file/d/1TB86JLdhvTLi-AOkvnoUIXk4uGbHPplK/view
+    - https://rendro.github.io/easy-pie-chart/
+- BootstrapCDN
+    - https://www.bootstrapcdn.com/
+- toastr
+    - https://cdnjs.com/libraries/toastr.js/latest
+- JavaScript drag & drop elements
+    - https://www.youtube.com/watch?v=jfYWwQrtzzY
 Par paraugu ņemtie vietņu uzraudzības pakalpojumu mājaslapas.
 1.	http://www.serviceuptime.com/
 2.	https://uptimerobot.com/
+3.	https://raidboxes.io/features/ 
+4.	https://www.webchangedetector.com/pricing/ 
+5.	https://account.adobe.com/billing-history?search=ADB100194049EU 
+6.	https://www.paessler.com/prtg/features
+7.	https://fontawesome.com/icons/trash?style=solid
 
