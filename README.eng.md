@@ -8,9 +8,19 @@ your website statistics such as: Ping, Response time, SSL certification check an
 and management system.
 
 ## What have I done in this project
- - ...
- - ...
- - ...
+- Guest side
+    - Created "Sākuma lapu".
+    - Created "Iespēju lapu".
+    - Created "Maksas lapu".
+- Userr side
+    - Created "informācijas paneli"
+    - Created "Uzraudzības dīkstāves lapu"
+    - Created "Tīmekļvietņu atsauces laiks lapu"
+    - Created "Tīmekļvietnes lejuplādes ātruma lapu"
+    - Created "Uzraudzību saraksts lapu"
+    - Created "Izveidot uzraudzību lapu"
+    - Created "Mainīt brīdinājuma periodu"
+    - Created "Uzraudzības rediģēšanas lapu"
 
 ## Table of content
  - [Versions](#versions)
