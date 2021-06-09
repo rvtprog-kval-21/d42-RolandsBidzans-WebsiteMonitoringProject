@@ -2,13 +2,19 @@
 
 namespace App;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
+use App\Models\Comment;
+use App\Models\Ticket;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Laratrust\Traits\LaratrustUserTrait;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Laravel\Cashier\Billable;
 
 class User extends Authenticatable
 {
+    use LaratrustUserTrait;
     use Notifiable;
+    use Billable;
 
     /**
      * The attributes that are mass assignable.
@@ -16,7 +22,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'profile_image', 'phone_number', 'country', 'city', 'gender', 'birthday',
     ];
 
     /**
@@ -36,4 +42,31 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /**
+     * Gets user information with roles table information
+     *
+     * @return $this
+     */
+    public function getUser()
+    {
+        $this->load('roles');
+        return $this;
+    }
+
+    /**
+     * @return HasMany
+     */
+    public function comments()
+    {
+        return $this->hasMany(Comment::class);
+    }
+
+    /**
+     * @return HasMany
+     */
+    public function tickets()
+    {
+        return $this->hasMany(Ticket::class, 'foreign_key', 'local_key');
+    }
 }

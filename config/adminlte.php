@@ -14,7 +14,7 @@ return [
     |
     */
 
-    'title' => 'AdminLTE 3',
+    'title' => 'WEBcheck',
     'title_prefix' => '',
     'title_postfix' => '',
 
@@ -45,12 +45,12 @@ return [
     |
     */
 
-    'logo' => '<b>Admin</b>LTE',
-    'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
-    'logo_img_class' => 'brand-image img-circle elevation-3',
+    'logo' => null,
+    'logo_img' => 'vendor/adminlte/dist/img/Logo.png',
+    'logo_img_class' => 'navbar-brand LogoPadding LogoCenter',
     'logo_img_xl' => null,
-    'logo_img_xl_class' => 'brand-image-xs',
-    'logo_img_alt' => 'AdminLTE',
+    'logo_img_xl_class' => 'navbar-brand LogoPadding LogoCenter',
+    'logo_img_alt' => 'WEBcheck logo',
 
     /*
     |--------------------------------------------------------------------------
@@ -64,7 +64,7 @@ return [
     |
     */
 
-    'usermenu_enabled' => true,
+    'usermenu_enabled' => false,
     'usermenu_header' => false,
     'usermenu_header_class' => 'bg-primary',
     'usermenu_image' => false,
@@ -83,7 +83,7 @@ return [
     |
     */
 
-    'layout_topnav' => null,
+    'layout_topnav' => false,
     'layout_boxed' => null,
     'layout_fixed_sidebar' => null,
     'layout_fixed_navbar' => null,
@@ -126,9 +126,9 @@ return [
     'classes_content_wrapper' => '',
     'classes_content_header' => '',
     'classes_content' => '',
-    'classes_sidebar' => 'sidebar-dark-primary elevation-4',
-    'classes_sidebar_nav' => '',
-    'classes_topnav' => 'navbar-white navbar-light',
+    'classes_sidebar' => 'sidebar-dark-info navbar-navy elevation-4',
+    'classes_sidebar_nav' => 'nav-child-indent nav-legacy',
+    'classes_topnav' => 'navbar-navy navbar-dark',
     'classes_topnav_nav' => 'navbar-expand',
     'classes_topnav_container' => 'container',
 
@@ -144,7 +144,7 @@ return [
     |
     */
 
-    'sidebar_mini' => true,
+    'sidebar_mini' => false,
     'sidebar_collapse' => false,
     'sidebar_collapse_auto_size' => false,
     'sidebar_collapse_remember' => false,
@@ -188,7 +188,7 @@ return [
 
     'use_route_url' => false,
 
-    'dashboard_url' => 'home',
+    'dashboard_url' => false,
 
     'logout_url' => 'logout',
 
@@ -230,89 +230,203 @@ return [
     |
     */
 
+    $adminSide = 'admin|member|developer|maintainer',
+    $userFree = 'userFree',
+    $userPro = 'userPro',
+    $userWebmaster = 'userWebmaster',
+
     'menu' => [
+        //
+        // UserFree
+        //
         [
-            'text' => 'search',
-            'search' => true,
-            'topnav' => true,
+            'text' => 'Dashboard',
+            'icon' => 'fas fa-tachometer-alt',
+            'classes' => 'text-bold',
+            'url' => '/user/dashboard',
+            'role' => $userFree,
         ],
         [
-            'text' => 'blog',
-            'url'  => 'admin/blog',
-            'can'  => 'manage-blog',
+            'text' => 'Monitoring',
+            'icon' => 'fas fa-chart-line',
+            'classes' => 'text-bold',
+            'role' => $userFree,
+            'submenu' => [
+                [
+                    'text' => 'Monitors',
+                    'icon' => 'fas fa-desktop',
+                    'submenu' => [
+                        [
+                            'text' => 'Monitor List',
+                            'icon' => 'fas fa-history',
+                            'url' => '/user/monitoring/monitors/list',
+                            'role' => $userFree,
+                        ],
+                        [
+                            'text' => 'Add Monitor',
+                            'icon' => 'fas fa-plus',
+                            'url' => '/user/monitoring/monitors/add',
+                            'role' => $userFree,
+                        ],
+                    ]
+                ],
+                [
+                    'text' => 'Uptime',
+                    'icon' => 'fas fa-eye',
+                    'url' => '/user/monitoring/uptime',
+                    'role' => $userFree,
+                ],
+                [
+                    'text' => 'Page Speed',
+                    'icon' => 'fas fa-stopwatch',
+                    'url' => '/user/monitoring/page-speed',
+                    'role' => $userFree,
+                ],
+                [
+                    'text' => 'Download Speed',
+                    'icon' => 'fas fa-download',
+                    'url' => '/user/monitoring/download-speed',
+                    'role' => $userFree,
+                ],
+            ]
         ],
         [
-            'text'        => 'pages',
-            'url'         => 'admin/pages',
-            'icon'        => 'far fa-fw fa-file',
-            'label'       => 4,
-            'label_color' => 'success',
-        ],
-        ['header' => 'account_settings'],
-        [
-            'text' => 'profile',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-user',
+            'text' => 'Alerts',
+            'icon' => 'fas fa-bell',
+            'classes' => 'text-bold',
+            'url' => '/user/alerts',
+            'role' => $userFree,
         ],
         [
-            'text' => 'change_password',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
+            'text' => 'Account Settings',
+            'icon' => 'fas fa-cog',
+            'classes' => 'text-bold',
+            'url' => '/user/settings',
+            'role' => $userFree,
         ],
-//        [
-//            'text'    => 'multilevel',
-//            'icon'    => 'fas fa-fw fa-share',
-//            'submenu' => [
-//                [
-//                    'text' => 'level_one',
-//                    'url'  => '#',
-//                ],
-//                [
-//                    'text'    => 'level_one',
-//                    'url'     => '#',
-//                    'submenu' => [
-//                        [
-//                            'text' => 'level_two',
-//                            'url'  => '#',
-//                        ],
-//                        [
-//                            'text'    => 'level_two',
-//                            'url'     => '#',
-//                            'submenu' => [
-//                                [
-//                                    'text' => 'level_three',
-//                                    'url'  => '#',
-//                                ],
-//                                [
-//                                    'text' => 'level_three',
-//                                    'url'  => '#',
-//                                ],
-//                            ],
-//                        ],
-//                    ],
-//                ],
-//                [
-//                    'text' => 'level_one',
-//                    'url'  => '#',
-//                ],
-//            ],
-//        ],
-//        ['header' => 'labels'],
-//        [
-//            'text'       => 'important',
-//            'icon_color' => 'red',
-//            'url'        => '#',
-//        ],
-//        [
-//            'text'       => 'warning',
-//            'icon_color' => 'yellow',
-//            'url'        => '#',
-//        ],
-//        [
-//            'text'       => 'information',
-//            'icon_color' => 'cyan',
-//            'url'        => '#',
-//        ],
+        [
+            'text' => 'Group',
+            'icon' => 'fas fa-users',
+            'classes' => 'text-bold',
+            'url' => '/user/user_group',
+            'role' => $userFree,
+        ],
+        [
+            'text' => 'Support',
+            'icon' => 'fas fa-question-circle',
+            'classes' => 'text-bold',
+            'url' => '/user/support/tickets',
+            'role' => $userFree,
+        ],
+        [
+            'header' => '',
+            'role' => $userFree,
+        ],
+        [
+            'text' => 'Back',
+            'icon' => 'fas fa-arrow-left',
+            'classes' => 'text-bold',
+            'url' => '/',
+            'role' => $userFree,
+        ],
+
+        //
+        // UserPro
+        //
+        [
+            'text' => 'Pro settings',
+            'icon' => 'fas fa-cog',
+            'classes' => 'text-bold',
+            'url' => '/settings',
+            'role' => $userPro,
+        ],
+        [
+            'header' => '',
+            'role' => $userPro,
+        ],
+        [
+            'text' => 'Back',
+            'icon' => 'fas fa-arrow-left',
+            'classes' => 'text-bold',
+            'url' => '/',
+            'role' => $userPro,
+        ],
+
+        //
+        // Admin
+        //
+        [
+            'text' => 'Dashboard',
+            'icon' => 'fas fa-tachometer-alt',
+            'url' => '/admin/dashboard',
+            'role' => $adminSide,
+        ],
+        [
+            'text' => 'Users',
+            'icon' => 'fas fa-users',
+            'url' => '/admin/users',
+            'role' => $adminSide,
+        ],
+        [
+            'text' => 'Team',
+            'icon' => 'fas fa-users',
+            'role' => $adminSide,
+            'submenu' => [
+                [
+                    'text' => 'Members',
+                    'icon' => 'fas fa-clipboard-list',
+                    'url' => '/admin/team/members',
+                    'role' => $adminSide,
+                ],
+                [
+                    'text' => 'Roles',
+                    'icon' => 'fas fa-user-cog',
+                    'role' => $adminSide,
+                    'submenu' => [
+                        [
+                            'text' => 'List',
+                            'icon' => 'fas fa-clipboard-list',
+                            'url' => '/admin/roles',
+                            'role' => $adminSide,
+                        ],
+                        [
+                            'text' => 'Add Role',
+                            'icon' => 'fas fa-plus',
+                            'url' => '/admin/roles/create',
+                            'role' => $adminSide,
+                        ],
+                        [
+                            'text' => 'Assign Role',
+                            'icon' => 'fas fa-wrench',
+                            'url' => '/admin/assign-role',
+                            'role' => $adminSide,
+                        ],
+                    ],
+                ],
+            ],
+        ],
+        [
+            'text' => 'Tickets',
+            'icon' => 'fas fa-ticket-alt',
+            'url' => '/admin/tickets',
+            'role' => $adminSide,
+        ],
+        [
+            'text' => 'Account Settings',
+            'icon' => 'fas fa-cog',
+            'url' => '/admin/settings',
+            'role' => $adminSide,
+        ],
+        [
+            'header' => '',
+            'role' => $adminSide,
+        ],
+        [
+            'text' => 'Back',
+            'icon' => 'fas fa-arrow-left',
+            'url' => '/',
+            'role' => $adminSide,
+        ],
     ],
 
     /*
@@ -328,13 +442,14 @@ return [
     */
 
     'filters' => [
-        JeroenNoten\LaravelAdminLte\Menu\Filters\GateFilter::class,
+//        JeroenNoten\LaravelAdminLte\Menu\Filters\GateFilter::class,
         JeroenNoten\LaravelAdminLte\Menu\Filters\HrefFilter::class,
         JeroenNoten\LaravelAdminLte\Menu\Filters\SearchFilter::class,
         JeroenNoten\LaravelAdminLte\Menu\Filters\ActiveFilter::class,
         JeroenNoten\LaravelAdminLte\Menu\Filters\ClassesFilter::class,
         JeroenNoten\LaravelAdminLte\Menu\Filters\LangFilter::class,
         JeroenNoten\LaravelAdminLte\Menu\Filters\DataFilter::class,
+        App\RoleMenuFilter::class,
     ],
 
     /*

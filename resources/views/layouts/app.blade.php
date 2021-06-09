@@ -9,64 +9,130 @@
 
     <title>{{ config('app.name', 'WEBcheck') }}</title>
 
-    <!-- Scripts -->
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <!-- Our scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 
-    <!-- Place your kit's code here -->
+    <!-- Cookies -->
+    <script type="text/javascript" id="cookieinfo"
+            src="//cookieinfoscript.com/js/cookieinfo.min.js"
+            data-font-family="Open Sans', sans-serif"
+            data-bg="#131a26"
+            data-fg="#FFFFFF"
+            data-link="#CA6D00"
+            data-message="{{ __('We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.') }}"
+            data-linkmsg="{{ __('More info') }}"
+            data-cookie="CookieScript"
+            data-text-align="center"
+            data-divlink="#FFFFFF"
+            data-divlinkbg="#CA6D00"
+            data-close-text="{{ __('Got it!') }}">
+    </script>
+
+    <!-- Font awesome -->
     <script src="https://kit.fontawesome.com/f53cf4b771.js" crossorigin="anonymous"></script>
 
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    @yield('scripts-top')
 
-    <!-- Styles -->
+    <!-- Our scripts -->
+    <script src="{{ asset('js/arrow.js') }}"></script>
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+
+    @yield('css')
+
+    <!-- Our styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <link href="/css/sections/footer.css" rel="stylesheet">
+    <link href="/css/sections/header.css" rel="stylesheet">
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-dark bg-darkblue shadow-sm">
+        {{-- Navigation bar --}}
+        <nav class="navbar navbar-expand-lg sticky-top bg-darkblue shadow-sm d-flex justify-content-between">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    <img src="{{URL::asset('/images/Logo.png')}}" alt="Logo" class="img-responsive">
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+
+                <!-- Navbar brand logo -->
+                <div class="navbar-nav col-4 align-items-start ">
+                    <a class="navbar-brand" href="{{ url('/') }}">
+                        <img src="{{URL::asset('/images/Logo.png')}}" alt="Logo" style="margin-right: 4rem !important;">
+                    </a>
+                </div>
+
+                <!-- Hamburger aka navbar toggler -->
+                <button class="navbar-toggler navbar-dark ml-auto toggler-example align-items-end" type="button" data-toggle="collapse"
+                        data-target="#navbarNavDropdown"
+                        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-                    </ul>
+                <div class="collapse navbar-collapse col-lg-8 col-md-12 col-sm-12" id="navbarNavDropdown">
 
                     <!-- Middle Of Navbar -->
-                    <ul class="navbar-nav m-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="/">{{ __('Home') }}</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/features">{{ __('Features') }}</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/pricing">{{ __('Pricing') }}</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/faq">{{ __('FAQ') }}</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/contacts">{{ __('Contacts') }}</a>
-                        </li>
-                    </ul>
+                    <div class="col-lg-6 col-md-12 col-sm-12" style="padding-left: 0px; padding-right: 0px;">
+                        <ul class="navbar-nav Sections mx-auto justify-content-center">
+                            {{-- Home --}}
+                            <li class="nav-item {{ Request::path() == '/' ? 'active' : '' }}">
+                                <a class="nav-link" href="{{ route('home') }}">
+                                    {{ __('Home') }}
+                                </a>
+                            </li>
+
+                            {{-- Features --}}
+                            <li class="nav-item {{ Request::path() == 'features' ? 'active' : '' }}">
+                                <a class="nav-link" href="{{ route('features') }}">
+                                    {{ __('Features') }}
+                                </a>
+                            </li>
+
+                            {{-- Pricing --}}
+                            <li class="nav-item {{ Request::path() == 'pricing' ? 'active' : '' }}">
+                                <a class="nav-link" href="{{ route('pricing') }}">
+                                    {{ __('Pricing') }}
+                                </a>
+                            </li>
+
+                            {{-- FAQ --}}
+                            <li class="nav-item {{ Request::path() == 'faq' ? 'active' : '' }}">
+                                <a class="nav-link" href="{{ route('faq') }}">
+                                    {{ __('FAQ') }}
+                                </a>
+                            </li>
+
+                            {{-- Team --}}
+                            <li class="nav-item {{ Request::path() == 'team' ? 'active' : '' }}">
+                                <a class="nav-link" href="{{ route('team') }}">
+                                    {{ __('Team') }}
+                                </a>
+                            </li>
+
+                            {{-- Contacts --}}
+                            <li class="nav-item {{ Request::path() == 'contacts' ? 'active' : '' }}">
+                                <a class="nav-link" href="{{ route('contacts') }}">
+                                   {{ __('Contacts') }}
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
 
                     <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
+                    <ul class="navbar-nav Authentication ml-auto justify-content-center">
                         <!-- Authentication Links -->
                         @guest
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Log in') }}</a>
+                            <li class="nav-item Login">
+                                <a class="nav-link" href="{{ route('login') }}">
+                                    {{ __('Sign in') }}
+                                </a>
                             </li>
+
                             @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link btn btn-orange" href="{{ route('register') }}">{{ __('Sign up') }}</a>
+                                <li class="nav-item Register">
+                                    <a class="nav-link btn btn-orange" href="{{ route('login') }}">
+                                        {{ __('Sign up') }}</a>
                                 </li>
                             @endif
                         @else
@@ -76,9 +142,22 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+
+                                    {{-- Admin dashboard--}}
+                                    @if (!(Laratrust::hasRole('userFree')) && !(Laratrust::hasRole('userPro')) && !(Laratrust::hasRole('userWebmaster')))
+                                        <a class="dropdown-item" href="{{ url('/admin/dashboard') }}">
+                                            {{ __('Dashboard') }}
+                                        </a>
+
+                                    {{-- User dashboard--}}
+                                    @else
+                                        <a class="dropdown-item" href="{{ url('/user/dashboard') }}">
+                                            {{ __('Dashboard') }}
+                                        </a>
+                                    @endif
+
                                     <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                                       onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
 
@@ -89,47 +168,108 @@
                             </li>
                         @endguest
                     </ul>
+
+                    <!-- Language Dropdown Menu -->
+                    <li class="nav-item dropdown Language">
+                        @if (App::isLocale('en'))
+                            <a class="nav-link" data-toggle="dropdown" href="#">
+                                <span class="flag-icon flag-icon-us"></span>
+                            </a>
+
+                        @elseif (App::isLocale('lv'))
+                            <a class="nav-link" data-toggle="dropdown" href="#">
+                                <span class="flag-icon flag-icon-lv"></span>
+                            </a>
+
+                        @elseif (App::isLocale('ru'))
+                            <a class="nav-link" data-toggle="dropdown" href="#">
+                                <span class="flag-icon flag-icon-ru"></span>
+                            </a>
+
+                        @else
+                            <a class="nav-link" data-toggle="dropdown" href="#">
+                                <span class="flag-icon flag-icon-us"></span>
+                            </a>
+                        @endif
+
+                        {{-- Languages --}}
+                        <div class="dropdown-menu dropdown-menu-right p-0">
+                            @if (App::isLocale(''))
+                                <a href="lang/en" class="dropdown-item {{ App::isLocale('') ? 'active' : '' }}">
+                                    <i class="flag-icon flag-icon-us mr-2"></i> {{ __('English') }}
+                                </a>
+
+                            @else
+                                <a href="lang/en" class="dropdown-item {{ App::isLocale('en') ? 'active' : '' }}">
+                                    <i class="flag-icon flag-icon-us mr-2"></i> {{ __('English') }}
+                                </a>
+                            @endif
+
+                            <a href="lang/lv" class="dropdown-item {{ App::isLocale('lv') ? 'active' : '' }}">
+                                <i class="flag-icon flag-icon-lv mr-2"></i> {{ __('Latvian') }}
+                            </a>
+
+                            <a href="lang/ru" class="dropdown-item {{ App::isLocale('ru') ? 'active' : '' }}">
+                                <i class="flag-icon flag-icon-ru mr-2"></i> {{ __('Russian') }}
+                            </a>
+                        </div>
+                    </li>
                 </div>
             </div>
         </nav>
 
+        {{-- Content--}}
         <main>
             @yield('content')
         </main>
 
+        {{-- Footer --}}
         <div class="pt-5 pb-5 footer footer-color">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-5 col-xs-12 about-company">
-                        <h2>WEBcheck</h2>
-                        <p class="pr-5 text-white-50">Monitoring services that allows you to check about
-                            your website statistics - Ping, Port, Response time, SSL Certification Check and much more
+                        <h2>
+                            {{ __('WEBcheck') }}
+                        </h2>
+
+                        <p class="pr-5 text-white-50">
+                            {{ __('Monitoring services that allows you to check about your website statistics - Port, Response time, SSL Certification Check and much more') }}
                         </p>
                     </div>
+
                     <div class="col-lg-3 col-xs-12 links">
-                        <h4 class="mt-lg-0 mt-sm-3">Links</h4>
+                        <h4 class="mt-lg-0 mt-sm-3">
+                            {{ __('Links') }}
+                        </h4>
+
                         <ul class="m-0 p-0">
-                            <li>- <a href="/">Home</a></li>
-                            <li>- <a href="/features">Features</a></li>
-                            <li>- <a href="/pricing">Pricing</a></li>
-                            <li>- <a href="/faq">FAQ</a></li>
-                            <li>- <a href="/contacts">Contacts</a></li>
+                            <li>- <a href="{{ route('home') }}">{{ __('Home') }}</a></li>
+                            <li>- <a href="{{ route('features') }}">{{ __('Features') }}</a></li>
+                            <li>- <a href="{{ route('pricing') }}">{{ __('Pricing') }}</a></li>
+                            <li>- <a href="{{ route('faq') }}">{{ __('FAQ') }}</a></li>
+                            <li>- <a href="{{ route('team') }}">{{ __('Team') }}</a></li>
+                            <li>- <a href="{{ route('contacts') }}">{{ __('Contacts') }}</a></li>
                         </ul>
                     </div>
                     <div class="col-lg-4 col-xs-12 location">
-                        <h4 class="mt-lg-0 mt-sm-4">Location</h4>
-                        <p>Krišjāņa Valdemāra iela 1C, Centra rajons, Rīga, LV-1010</p>
-                        <p class="mb-0"><i class="fa fa-phone mr-3"></i>+371 22222222</p>
-                        <p><i class="fa fa-envelope-o mr-3"></i>webcheck@gmail.com</p>
+                        <h4 class="mt-lg-0 mt-sm-4">{{ __('Location') }}</h4>
+                        <p>{{ __('Krišjāņa Valdemāra iela 1C, Centra rajons, Rīga, LV-1010') }}</p>
+                        <p class="mb-0"><i class="fa fa-phone mr-3"></i>{{ __('+371 22222222') }}</p>
+                        <p><i class="fa fa-envelope-o mr-3"></i>{{ __('webcheck@gmail.com') }}</p>
                     </div>
                 </div>
                 <div class="row mt-5">
                     <div class="col copyright">
-                        <p class=""><small class="text-white-50">© 2020. All Rights Reserved.</small></p>
+                        <p class=""><small class="text-white-50">{{ __("© :year. All Rights Reserved.", ['year' => "2021"]) }}</small></p>
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- Arrow who sends back to the top-->
+        <a id="back2Top" title="Back to top" href="#">&#10148;</a>
     </div>
+
+    @yield('scripts-bottom')
 </body>
 </html>

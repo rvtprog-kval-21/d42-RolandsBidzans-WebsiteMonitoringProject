@@ -1,9 +1,18 @@
 # Tīmekļa vietnes uzraudzības pakalpojums “WEBcheck”
 
+*Lasīt šo informāciju citās valodās: [🇬🇧](README.eng.md)* 
+
+
+
 ## Projekta apraksts
 PIKC “Rīgas Valsts tehnikums” Kvalifikācijas darba repozitorijs. Uzraudzības pakalpojums, kas ļauj pārbaudīt
-jūsu tīmekļa vietnes statistiku - pingu, portu, atbildes laiku, SSL sertifikācijas pārbaudi un daudz ko citu. 
-Lietotāja/administratora/viesa autentifikācija un pārvaldības sistēma. Ir 2 veidu konti - bezmaksas un pro.
+jūsu tīmekļa vietnes statistiku, ka piemēram: pingu, atbildes laiku, SSL sertifikācijas pārbaudi un daudzas citas funkcionalitātes. 
+Lietotāja/administratora/viesa autentifikācija un pārvaldības sistēma.
+
+## Ko esmu paveicis šaja projektā
+ - ...
+ - ...
+ - ...
 
 
 ## Ko esmu paveicis šajā projektā
@@ -19,19 +28,25 @@ Lietotāja/administratora/viesa autentifikācija un pārvaldības sistēma. Ir 2
  - [Instalācija](#instalācija)
    - [Klonešana](#klonešana)
    - [Uzstādīšana](#uzstādīšana)
-   - [Kopējie izmantotie avoti](#kopējie-zmantotie-avoti)
+   - [Kopējie izmantotie avoti](#kopējie-zmantotie-avoti
  - [Mani izmantotie avoti](#mani-izmantotie-avoti)
 
 ## Versijas
- - Php: **7.2.5**
- - Apache
- - Phpmyadmin 
- - Mysql
+ - Php: **^7.3.21**
+ - Apache **2.4.46**
+ - Phpmyadmin **5.0.2**
+ - Mysql **5.7.31**
  - Zabbix: **5**
+ - CentOS **8**
  - Laravel **7.24**
  - Adminlte **^3.5**
- - npm **6.14.8**
- - CentOS **8**
+ - npm **^6.14.8**
+ - Laratrust **^6.2**
+ - Stripe **^7.75**
+ - Cashier **^12.9**
+ - Hashids **^4.0**
+ - Phpunit **^8.5**
+ - Faker **^1.9.1**
 
 ## Izmantotās tehnoloģijas
 Valodas:
@@ -51,16 +66,35 @@ Ietvari:
 Serveri:
 - [Zabbix](https://en.wikipedia.org/wiki/Zabbix) ir uzstadīts uz [CentOS](https://en.wikipedia.org/wiki/CentOS) virtuālās kastes
 
-Citi:
+Tīmekļa serveri:
 - [Apache](https://en.wikipedia.org/wiki/Apache_HTTP_Server)
+
+Tīmekļa pielikuma rīki:
 - [Phpmyadmin](https://en.wikipedia.org/wiki/PhpMyAdmin)
+
+Relāciju datubāzu pārvaldības sistēmas:
 - [Mysql](https://en.wikipedia.org/wiki/MySQL)
+
+Administratora informācijas panelis un vadības paneļi:
 - [Adminlte](https://adminlte.io/)
+
+Pakotņu pārvaldnieki:
 - [npm](https://en.wikipedia.org/wiki/Npm_(software))
+
+JavaScript bibliotēka datu vizualizēšanai:
 - [Chart.js](https://www.chartjs.org/)
 
-## Prasības
+Finanšu pakalpojumi un programmatūras:
+- [Stripe](https://stripe.com/en-lv)
 
+Citi:
+- [Laratrust](https://laratrust.santigarcor.me)
+- [Cashier](https://laravel.com/docs/master/billing)
+- [Hashids](https://hashids.org) 
+- [Phpunit](https://phpunit.de)
+- [Faker](https://github.com/fzaninotto/Faker)
+
+## Prasības
 Lai palaistu šo kvalifikācijas darbu, ir jābūt:
 
 1. WampServer var lejupielādēt [šeit](https://www.wampserver.com/en/#download-wrapper)
@@ -71,71 +105,32 @@ Lai palaistu šo kvalifikācijas darbu, ir jābūt:
 ## Instalācija
 
 ### Klonešana
-
-> Klonēt šo repozitoriju uz vietējo datoru, izmantojot `https://git01.obvius.lv:10143/mon/monitoring_project.git`
+Klonēt šo repozitoriju uz vietējo datoru, izmantojot `https://github.com/rvtprog-kval-21/...`
 
 ```bash
-git clone https://git01.obvius.lv:10143/mon/monitoring_project.git
+git clone https://github.com/rvtprog-kval-21/...
 cd monitoring-project
 ```
 
 ### Uzstādīšana
-
-> Instalēt composer priekš projekta
+Skripts, kas palaiž visas nepieciešāmās komandas
 ```bash
-composer install 
+composer run-script start-project
 ```
 
-> Ja rodas problēma, lejupielādējot composer, izmantojiet šīs komandas
+Pievienot datubāzi ar nosaukumu - monitoring_project
+
+Pēc datubāzes pievienošanas, izmantojiet šo komandu, kas izveidos tabulas ar pirmstam izveidotiem datiem
 ```bash
-composer dump-autoload
+php artisan migrate:fresh --seed
 ```
 
-Vai
-
+Pievienot pie .env faila savus vidē mainīgos un palaist komandu
 ```bash
-COMPOSER_MEMORY_LIMIT=-1 composer install
+php run-script clear-project-cache
 ```
 
-> Instalēt npm priekš projekta
-```bash
-npm install
-```
-
-> Kompilēt failus
-```bash
-npm run dev
-```
-
-Vai
-
-> Kompilēt failus automātiski
-```bash
-npm run watch
-```
-
-> Kopē .env.example failu un ievieto ar jaunu nosaukumu - .env un ielieciet savā vidē mainīgos.
-```bash
-cp .env.example .env
-```
-
-> Pievienot datu bāzi ar nosaukumu - monitoring_project un izmantojiet šo komandu
-```bash
-php artisan migrate
-```
-
-> Komentēt arā 288,289,290 rindas no vendor/becker/laravel-zabbix-api/src/ZabbixApiAbstract.php faila
-```bash
-284             // validate response
-285             if (!is_object($this->responseDecoded) && !is_array($this->responseDecoded)) {
-286                 throw new Exception('Could not decode JSON response.');
-287             }
-288     //        if (array_key_exists('error', $this->responseDecoded)) {
-289     //            throw new Exception('API error '.$this->responseDecoded->error->code.': '.$this->responseDecoded->error->data);
-290     //        }
-```
-
-> Palaist projektu lokālajā datorā
+Palaist projektu lokālajā datorā
 ```bash
 php artisan serve
 ```
@@ -225,11 +220,31 @@ Laravel development server started: http://127.0.0.1:8000
     - https://github.com/chartjs
     - https://medium.com/javascript-in-plain-english/exploring-chart-js-e3ba70b07aa4
     - https://tobiasahlin.com/blog/chartjs-charts-to-get-you-started/
-
-
-
+- Laratrust
+    - https://laratrust.santigarcor.me
+    - https://github.com/santigarcor/laratrust
+    - https://packagist.org/packages/santigarcor/laratrust
+- Stripe
+    - https://stripe.com
+    - https://en.wikipedia.org/wiki/Stripe_(company)
+    - https://twitter.com/stripe
+- Cashier
+    - https://laravel.com/docs/8.x/billing
+    - https://github.com/laravel/cashier-stripe
+- Hashids
+    - https://hashids.org
+    - https://github.com/vinkla/hashids
+    - https://www.npmjs.com/package/hashids
+- Phpunit
+    - https://phpunit.de
+    - https://github.com/sebastianbergmann/phpunit
+    - https://laravel.com/docs/8.x/testing
+- Faker
+    - https://github.com/fzaninotto/Faker
+    - https://laravel-news.com/changes-coming-to-php-faker
 ## Mani izmantotie avoti
 
 Par paraugu ņemtie vietņu uzraudzības pakalpojumu mājaslapas.
 1.	http://www.serviceuptime.com/
 2.	https://uptimerobot.com/
+
