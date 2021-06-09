@@ -1,0 +1,202 @@
+Dizains paņemts no:
+
+http://www.serviceuptime.com/services.php
+https://uptimerobot.com/#features
+https://raidboxes.io/features/ -> Paņēmu par piemēru prieks Features page (nokopets teksts)
+https://www.webchangedetector.com/pricing/ -> dizains priekš Frequently Asked Questions
+https://account.adobe.com/billing-history?search=ADB100194049EU -> paņēmu par piemēru payment histori dizainu
+https://www.paessler.com/prtg/features
+https://fontawesome.com/icons/trash?style=solid -> trash icon
+
+Izmantotie avoti:
+
+https://stackoverflow.com/questions/15405307/how-can-i-set-a-css-border-on-one-side-only
+        
+https://www.digitalocean.com/community/tutorials/how-to-add-javascript-to-html#:~:text=You%20can%20add%20JavaScript%20code,want%20the%20JavaScript%20to%20load
+     
+https://www.bitdegree.org/learn/javascript-setinterval#:~:text=The%20JavaScript%20setInterval()%20method%20returns%20an%20ID%20which%20can,use%20the%20setTimeout()%20method
+ 
+https://www.w3schools.com/jsref/met_win_clearinterval.asp#:~:text=myVar%20%3D%20setInterval(%22javascript%20function,calling%20the%20clearInterval()%20method
+
+https://css-tricks.com/examples/GradientBorder/ 
+
+https://www.w3schools.com/cssref/css3_pr_box-shadow.asp
+
+https://www.w3schools.com/howto/howto_css_blurred_background.asp
+
+https://stackoverflow.com/questions/9329446/for-each-over-an-array-in-javascrip
+
+https://www.w3schools.com/cssref/pr_class_position.asp 
+
+https://stackoverflow.com/questions/7305014/how-to-add-and-remove-div-tag-dynamically-with-javascript
+
+https://www.w3schools.com/jsref/jsref_tostring_number.asp
+
+https://www.w3schools.com/jsref/prop_style_opacity.asp
+
+https://www.w3schools.com/css/css3_gradients_radial.asp
+
+https://stackify.com/what-is-real-user-monitoring/#:~:text=%20Basic%20Steps%20in%20Real%20User%20Monitoring%20,slow%20response%20times%2C%20system%20problems%2C%20web...%20More%20
+
+https://stackoverflow.com/questions/44839648/no-application-encryption-key-has-been-specified
+
+https://www.youtube.com/watch?v=QY7Rj8aZcZk
+
+https://getbootstrap.com/docs/4.5/components/modal/#live-demo
+
+
+https://www.w3schools.com/cssref/css3_pr_animation-fill-mode.asp
+
+https://www.w3schools.com/howto/howto_js_rangeslider.asp
+
+https://www.w3schools.com/css/css_pseudo_classes.asp
+
+https://www.w3schools.com/css/css_outline.asp
+
+https://codepen.io/lucasyem/pen/ZEEYKdj
+
+https://www.w3schools.com/html/html_form_elements.asp
+
+https://laravel.com/docs/4.2/html
+
+https://www.youtube.com/watch?v=LekyHMiuNgI
+
+https://www.w3docs.com/snippets/css/how-to-horizontally-center-a-div-in-another-div.html
+
+https://www.hongkiat.com/blog/responsive-lightbox-library/
+
+Toggle switch
+https://www.youtube.com/watch?v=uCjDIMADK0w
+
+Flexbox guid  Pamācība par flex box
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+input forms design
+https://freefrontend.com/css-input-text/
+
+HTML LINKS
+https://www.w3schools.com/html/html_links.asp
+
+JavaScript HTML DOM EventListener
+https://www.w3schools.com/js/js_htmldom_eventlistener.asp
+
+HTML DOM Input Text Object
+https://www.w3schools.com/jsref/dom_obj_text.asp
+
+HTML DOM id Property
+https://www.w3schools.com/Jsref/prop_html_id.asp
+
+HTML <input> value Attribute
+https://www.w3schools.com/tags/att_input_value.asp
+
+Adding and Removing Elements on the Fly Using JavaScript
+https://www.abeautifulsite.net/adding-and-removing-elements-on-the-fly-using-javascript
+
+CSS Flex Container
+https://www.w3schools.com/css/css3_flexbox_container.asp
+
+Remove, add elements in js
+https://www.youtube.com/watch?v=b8sUhU_eq3g
+
+Element.insertAdjacentHTML()
+https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentHTML
+
+How to remove bootstrap modal overlay?
+https://stackoverflow.com/questions/32459337/how-to-remove-bootstrap-modal-overlay
+
+How to align Bootstrap modal vertically center
+https://www.tutorialrepublic.com/faq/how-to-align-bootstrap-modal-vertically-center.php#:~:text=Answer%3A%20Use%20the%20CSS%20margin%2Dtop%20Property&text=This%20solution%20will%20dynamically%20adjust,user%20resizes%20the%20browser%20window.
+
+JavaScript JSON
+https://www.w3schools.com/js/js_json.asp
+
+jQuery toggleClass() Method
+https://www.w3schools.com/jquery/html_toggleclass.asp#:~:text=The%20toggleClass()%20method%20toggles,This%20creates%20a%20toggle%20effect.
+
+Javascript How to get first three characters of a string
+https://stackoverflow.com/questions/39886730/javascript-how-to-get-first-three-characters-of-a-string
+
+JavaScript Array length Property
+https://www.w3schools.com/jsref/jsref_length_array.asp
+
+Remove json element
+https://stackoverflow.com/questions/5310304/remove-json-element
+
+JavaScript Array slice() Method
+https://www.w3schools.com/jsref/jsref_slice_array.asp
+
+how to remove json object key and value.?
+https://stackoverflow.com/questions/46599519/how-to-remove-json-object-key-and-value/46599555
+
+Remove Object from Array using JavaScript
+https://stackoverflow.com/questions/10024866/remove-object-from-array-using-javascript
+
+Forms & Saving Data
+https://www.youtube.com/watch?v=-QapNzUE4V0
+
+How to get Last digit of number
+https://stackoverflow.com/questions/32695991/how-to-get-last-digit-of-number
+
+Bootstrap Forms
+https://getbootstrap.com/docs/4.0/components/forms/
+
+What event handler do I need to use for a drop down menu list in JavaScript?
+https://www.youtube.com/watch?v=BrpiNUf2XCk
+
+How TO - Add a Class
+https://www.w3schools.com/howto/howto_js_add_class.asp
+
+CSS3 Creative Check List | Custom Checkbox using CSS
+https://www.youtube.com/watch?v=paivur01Z78
+
+Check if checkbox is checked with jQuery
+https://stackoverflow.com/questions/2204250/check-if-checkbox-is-checked-with-jquery
+
+PHP foreach Loop
+https://www.w3schools.com/php/php_looping_foreach.asp
+
+
+
+
+
+Adminlte/ChartJS area chart
+https://adminlte.io/themes/dev/AdminLTE/pages/charts/chartjs.html
+
+Date Range Picker
+https://www.daterangepicker.com/
+
+Jquery data picker
+https://jqueryui.com/datepicker/
+
+Bootstrap color picker
+https://cdnjs.com/libraries/bootstrap-colorpicker/3.2.0
+https://itsjavi.com/bootstrap-colorpicker/module-options.html //options
+https://itsjavi.com/bootstrap-colorpicker/v2/   //options
+https://itsjavi.com/bootstrap-colorpicker/tutorial-Basics.html   //examples
+
+jQuery Knob - Tutorial and Example
+https://www.youtube.com/watch?v=xr0wGjZ6Ckc
+
+easy-pie-chart
+https://code.jquery.com/       //jquery
+https://github.com/rendro/easy-pie-chart/tree/master/dist   //min.js file
+https://drive.google.com/file/d/1TB86JLdhvTLi-AOkvnoUIXk4uGbHPplK/view     //plagin
+https://rendro.github.io/easy-pie-chart/          //easy-pie-chart options, usage
+
+BootstrapCDN
+https://www.bootstrapcdn.com/
+
+
+toastr
+https://cdnjs.com/libraries/toastr.js/latest
+sweetalert
+https://www.npmjs.com/package/sweetalert2
+https://www.jsdelivr.com/package/npm/sweetalert2?path=dist
+
+JQuery UI /drag elements
+https://jqueryui.com/download/all/ //libraries
+https://www.youtube.com/watch?v=mPiq8Cvl5k4  //tutorial
+
+
+JavaScript drag & drop elements
+https://www.youtube.com/watch?v=jfYWwQrtzzY
