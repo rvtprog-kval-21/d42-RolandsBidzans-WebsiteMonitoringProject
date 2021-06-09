@@ -9,17 +9,20 @@ PIKC “Rīgas Valsts tehnikums” Kvalifikācijas darba repozitorijs. Uzraudzī
 jūsu tīmekļa vietnes statistiku, ka piemēram: pingu, atbildes laiku, SSL sertifikācijas pārbaudi un daudzas citas funkcionalitātes. 
 Lietotāja/administratora/viesa autentifikācija un pārvaldības sistēma.
 
-## Ko esmu paveicis šaja projektā
- - ...
- - ...
- - ...
-
-
 ## Ko esmu paveicis šajā projektā
-    -Izveidoju dizainu priekš "Home page" iekšā figma.com.
-    -Izveidoju dizainu priekš "Log in page" iekšā figma.com.
-    -Izveidoju dizainu priekš "Features page" iekšā figma.com.
-    -Realizēju dizainu "Home page".
+- Viesis
+    - Izveidoju, realizēju dizainu priekš "Sākuma lapu".
+    - Izveidoju, realizēju dizainu priekš "Iespēju lapu".
+    - Izveidoju, realizēju dizainu priekš "Maksas lapu".
+- Lietotāju daļa
+    - Izveidoju "informācijas paneli"
+    - Izveijoju "Uzraudzības dīkstāves lapu"
+    - Izveidoju "Tīmekļvietņu atsauces laiks lapu"
+    - Izveidoju "Tīmekļvietnes lejuplādes ātruma lapu"
+    - Izveidoju "Uzraudzību saraksts lapu"
+    - Izveidoju "Izveidot uzraudzību lapu"
+    - Izveidoju "Mainīt brīdinājuma periodu"
+    - Izveidoju "Uzraudzības rediģēšanas lapu"
     
 ## Saturs
  - [Versijas](#versijas)
@@ -265,12 +268,13 @@ Laravel development server started: http://127.0.0.1:8000
     - https://cdnjs.com/libraries/toastr.js/latest
 - JavaScript drag & drop elements
     - https://www.youtube.com/watch?v=jfYWwQrtzzY
-Par paraugu ņemtie vietņu uzraudzības pakalpojumu mājaslapas.
+## Par paraugu ņems dizains
 1.	http://www.serviceuptime.com/
 2.	https://uptimerobot.com/
 3.	https://raidboxes.io/features/ 
 4.	https://www.webchangedetector.com/pricing/ 
 5.	https://account.adobe.com/billing-history?search=ADB100194049EU 
 6.	https://www.paessler.com/prtg/features
-7.	https://fontawesome.com/icons/trash?style=solid
+## Izmantotās ikonas
+1.	https://fontawesome.com/icons/trash?style=solid
 
