@@ -1,5 +1,8 @@
 # Tīmekļa vietnes uzraudzības pakalpojums “WEBcheck”
+
 *Lasīt šo informāciju citās valodās: [🇬🇧](README.eng.md)* 
+
+
 
 ## Projekta apraksts
 PIKC “Rīgas Valsts tehnikums” Kvalifikācijas darba repozitorijs. Uzraudzības pakalpojums, kas ļauj pārbaudīt
@@ -11,6 +14,13 @@ Lietotāja/administratora/viesa autentifikācija un pārvaldības sistēma.
  - ...
  - ...
 
+
+## Ko esmu paveicis šajā projektā
+    -Izveidoju dizainu priekš "Home page" iekšā figma.com.
+    -Izveidoju dizainu priekš "Log in page" iekšā figma.com.
+    -Izveidoju dizainu priekš "Features page" iekšā figma.com.
+    -Realizēju dizainu "Home page".
+    
 ## Saturs
  - [Versijas](#versijas)
  - [Izmantotās tehnoloģijas](#izmantotās-tehnoloģijas)
@@ -18,7 +28,7 @@ Lietotāja/administratora/viesa autentifikācija un pārvaldības sistēma.
  - [Instalācija](#instalācija)
    - [Klonešana](#klonešana)
    - [Uzstādīšana](#uzstādīšana)
- - [Kopējie izmantotie avoti](#kopējie-izmantotie-avoti)
+   - [Kopējie izmantotie avoti](#kopējie-zmantotie-avoti
  - [Mani izmantotie avoti](#mani-izmantotie-avoti)
 
 ## Versijas
@@ -233,6 +243,8 @@ Laravel development server started: http://127.0.0.1:8000
     - https://github.com/fzaninotto/Faker
     - https://laravel-news.com/changes-coming-to-php-faker
 ## Mani izmantotie avoti
-...
-...
-...
+
+Par paraugu ņemtie vietņu uzraudzības pakalpojumu mājaslapas.
+1.	http://www.serviceuptime.com/
+2.	https://uptimerobot.com/
+
