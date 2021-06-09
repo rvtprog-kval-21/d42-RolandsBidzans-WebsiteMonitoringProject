@@ -31,8 +31,9 @@ Lietotāja/administratora/viesa autentifikācija un pārvaldības sistēma.
  - [Instalācija](#instalācija)
    - [Klonešana](#klonešana)
    - [Uzstādīšana](#uzstādīšana)
-   - [Kopējie izmantotie avoti](#kopējie-zmantotie-avoti
+   - [Kopējie izmantotie avoti](#kopējie-izmantotie-avoti)
  - [Mani izmantotie avoti](#mani-izmantotie-avoti)
+ - [Par paraugu ņems dizains](#par-paraugu-ņems-dizains)
 
 ## Versijas
  - Php: **^7.3.21**
