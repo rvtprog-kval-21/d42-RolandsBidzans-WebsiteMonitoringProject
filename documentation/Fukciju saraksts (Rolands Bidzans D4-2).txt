@@ -1,0 +1,7 @@
+1. Izveidot uzraudzību
+2. Rediģēt uzraudzību
+3. Apskatīt Mājaslapas dikstāves laik
+4. apskatit mājaslapu atsauces laiku
+5. apskatīt mājaslapas lejuplādes ātrumu
+6. Iedot iespēju lietotajam izvēlēties laikus, kad viņš grib saņemt brīdinājuma ziņas uz epastu
+7. Dot iespēju lietotājam Informācijas panelī izveidot elementus, kuri izvada dažāda veida informāciju no zabbix.
