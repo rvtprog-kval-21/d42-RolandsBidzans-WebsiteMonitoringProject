@@ -124,9 +124,10 @@ Zabbiks konfigurācija projektā
 Palaidiet CentOS uz virtuālās mašīnas un autorizējaties izmantojot lietotājvārdu: root un paroli: 29777990r.
 Atveriet terminālu  un ierakstiet komandu "ip a" un nokopejiet virtuālās mašīnas IP
 Tad projektā atveriet .env failu un nomainiet:
-   1.ZABBIX_HOST = jūsu virtuālās mašīnas IP
+   1.ZABBIX_HOST = http://jūsu-virtuālās-mašīnas-IP/zabbix
    2.ZABBIX_USERNAME=Admin
    3.ZABBIX_PASSWORD=zabbix
+Kad tas ir izdarīts turpiniet projekta uzstādīšanu
 ```
 Skripts, kas palaiž visas nepieciešāmās komandas
 ```bash
