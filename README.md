@@ -119,6 +119,11 @@ cd monitoring-project
 ```
 
 ### Uzstādīšana
+Skripts, kas palaiž visas nepieciešāmās komandas
+```bash
+composer run-script start-project
+```
+
 Zabbiks konfigurācija projektā
 ```brash
 Palaidiet CentOS uz virtuālās mašīnas un autorizējaties izmantojot lietotājvārdu: root un paroli: 29777990r.
@@ -128,10 +133,6 @@ Tad projektā atveriet .env failu un nomainiet:
    2.ZABBIX_USERNAME=Admin
    3.ZABBIX_PASSWORD=zabbix
 Kad tas ir izdarīts turpiniet projekta uzstādīšanu
-```
-Skripts, kas palaiž visas nepieciešāmās komandas
-```bash
-composer run-script start-project
 ```
 
 Pievienot datubāzi ar nosaukumu - monitoring_project
