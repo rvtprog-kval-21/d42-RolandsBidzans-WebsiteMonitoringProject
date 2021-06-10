@@ -9,18 +9,12 @@ and management system.
 
 ## What have I done in this project
 - Guest side
-    - Created "Sākuma lapu".
-    - Created "Iespēju lapu".
-    - Created "Maksas lapu".
-- Userr side
-    - Created "informācijas paneli"
-    - Created "Uzraudzības dīkstāves lapu"
-    - Created "Tīmekļvietņu atsauces laiks lapu"
-    - Created "Tīmekļvietnes lejuplādes ātruma lapu"
-    - Created "Uzraudzību saraksts lapu"
-    - Created "Izveidot uzraudzību lapu"
-    - Created "Mainīt brīdinājuma periodu"
-    - Created "Uzraudzības rediģēšanas lapu"
+    - I created a website home page and features page.
+- User side
+    - I created add monitor page, where users are able to create monitor, which monitor specific Website.
+    - I created response times, download speeds, and upTime pages where users can see metrics for a monitored Website.
+    - When website is down, user receives alert notifications
+    - I created customizable dashboard for user.
 
 ## Table of content
  - [Versions](#versions)
