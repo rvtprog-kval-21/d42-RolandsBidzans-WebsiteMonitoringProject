@@ -11,18 +11,14 @@ Lietotāja/administratora/viesa autentifikācija un pārvaldības sistēma.
 
 ## Ko esmu paveicis šajā projektā
 - Viesis
-    - Izveidoju, realizēju dizainu priekš "Sākuma lapu".
-    - Izveidoju, realizēju dizainu priekš "Iespēju lapu".
-    - Izveidoju, realizēju dizainu priekš "Maksas lapu".
+    - Izveidojis tīmekļvietnes sākuma lapu un sistēmas apraksta lapu.
 - Lietotāju daļa
-    - Izveidoju "informācijas paneli"
-    - Izveijoju "Uzraudzības dīkstāves lapu"
-    - Izveidoju "Tīmekļvietņu atsauces laiks lapu"
-    - Izveidoju "Tīmekļvietnes lejuplādes ātruma lapu"
-    - Izveidoju "Uzraudzību saraksts lapu"
-    - Izveidoju "Izveidot uzraudzību lapu"
-    - Izveidoju "Mainīt brīdinājuma periodu"
-    - Izveidoju "Uzraudzības rediģēšanas lapu"
+    - Izveidojis lapu pievienot jaunu uzraudzību, kur lietotāji ievada tīmekļvietnes adresi un Zabbix, atvērtā koda uzraudzības programmatūras rīks, sāk vākt datus par konkrēto adresi
+    - Izveidojis trīs vietnes lapas, kuros tiek izvadītas diagrammu veidā, uzraugāmo adrešu metrikas - atsauces laiks, lejuplādes ātrums un vietnes darbības laiks bez incidentiem.
+    - Izveidojis lapu, kur tiek izvadīti ekrānā lietotāja izveidotās uzraudzības, kurā ir iespējams rediģēt uzraudzību.
+    - Kā arī lietotājam ir iespēja saņemt e-pasta ziņojumu, uzraugāmās vietnes dīkstāves laikā.
+    - Lietotajiem ir iespeja izvēlēties laiku, kad viņi nekrib saņemt brīdinājuma ziņas.
+    - Izveidojis pielāgojamu Informācijas paneli.
     
 ## Saturs
  - [Versijas](#versijas)
