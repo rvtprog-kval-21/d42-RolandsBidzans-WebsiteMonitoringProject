@@ -105,6 +105,8 @@ Lai palaistu šo kvalifikācijas darbu, ir jābūt:
 2. Composer var lejupielādēt [šeit](https://getcomposer.org/download/)
 3. npm var lejupielādēt [šeit](https://www.npmjs.com/get-npm)
 3. Git Bash var lejupielādēt [šeit](https://git-scm.com/downloads)
+4. VM VirtualBox lejuplādēt [šeit](https://www.virtualbox.org/wiki/Downloads)
+5. Operetājsistēmu CentOS ar Zabbix serveri lejuplādēt [šeit](https://drive.google.com/file/d/1mqf9E1MbYHwLVFzno5VXTwelTT7Miqi5/view?usp=sharing)
 
 ## Instalācija
 
@@ -117,6 +119,15 @@ cd monitoring-project
 ```
 
 ### Uzstādīšana
+Zabbiks konfigurācija projektā
+```brash
+Palaidiet CentOS uz virtuālās mašīnas un autorizējaties izmantojot lietotājvārdu: root un paroli: 29777990r.
+Atveriet terminālu  un ierakstiet komandu "ip a" un nokopejiet virtuālās mašīnas IP
+Tad projektā atveriet .env failu un nomainiet:
+   1.ZABBIX_HOST = jūsu virtuālās mašīnas IP
+   2.ZABBIX_USERNAME=Admin
+   3.ZABBIX_PASSWORD=zabbix
+```
 Skripts, kas palaiž visas nepieciešāmās komandas
 ```bash
 composer run-script start-project
